@@ -1,4 +1,4 @@
-﻿namespace ClerkManagementApp.Migrations
+﻿namespace TaskManagementApp.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
@@ -18,22 +18,10 @@
                     })
                 .PrimaryKey(t => t.Id);
             
-            DropTable("dbo.TaskModels");
         }
         
         public override void Down()
         {
-            CreateTable(
-                "dbo.TaskModels",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Title = c.String(),
-                        IsCompleted = c.Boolean(nullable: false),
-                        DueDate = c.DateTime(nullable: false),
-                    })
-                .PrimaryKey(t => t.Id);
-            
             DropTable("dbo.ClerkModels");
         }
     }

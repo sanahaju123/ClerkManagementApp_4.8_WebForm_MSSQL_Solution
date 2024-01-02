@@ -28,20 +28,20 @@ namespace ClerkManagementApp.DAL.Services
 
         public string Add()
         {
-            string qry = "insert into ClerkModels(Title, IsCompleted, DueDate)" +
+            string qry = "insert into ClerkModels(FirstName, LastName, DateOfBirth)" +
                 "values('";
             return qry;
         }
 
         public string Update()
         {
-            var query = "update ClerkModels set Title='";
+            var query = "update ClerkModels set FirstName='";
             return query;
         }
 
         public string Delete()
         {
-            var query = "delete from ClerkModels where Id='";
+            var query = "delete from ClerkModels where ID='";
             return query;
         }
     }
